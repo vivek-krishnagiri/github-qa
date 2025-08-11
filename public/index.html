@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub Q&A</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>GitHub Q&A</h1>
+      <p class="sub">Ask questions about your own GitHub</p>
+    </header>
+
+    <section id="auth">
+      <button id="loginBtn">Sign in with GitHub</button>
+      <div id="userBox" class="hidden">
+        <img id="avatar" alt="" />
+        <div>
+          <div id="welcome"></div>
+          <button id="logoutBtn" class="linklike">Sign out</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="chat" class="hidden">
+      <div id="messages"></div>
+      <form id="askForm">
+        <input id="q" type="text" placeholder="e.g., How many repositories do I have?" autocomplete="off" />
+        <button type="submit">Ask</button>
+      </form>
+      <p class="hint">Try: “How many repos do I have?”, “How many files are in &lt;repo&gt;?”, “How many lines in &lt;repo&gt;/path/to/file.ext?”</p>
+    </section>
+
+    <footer>
+      <small>Powered by GitHub + OpenAI • Deployed on Netlify</small>
+    </footer>
+  </main>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+:root { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100dvh; display: grid; place-items: center; background: #0f172a; color: #e5e7eb; }
+.card { width: min(820px, 92vw); background: #111827; border: 1px solid #1f2937; border-radius: 14px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+header { margin-bottom: 12px; }
+h1 { margin: 0 0 4px; font-size: 28px; }
+.sub { margin: 0; color: #9ca3af; }
+#auth { display: flex; align-items: center; gap: 14px; margin: 8px 0 12px; }
+#loginBtn { background: #1f6feb; border: none; color: white; padding: 10px 14px; border-radius: 10px; cursor: pointer; }
+#loginBtn:hover { filter: brightness(1.1); }
+#userBox { display: flex; align-items: center; gap: 10px; }
+#userBox img { width: 36px; height: 36px; border-radius: 50%; }
+.linklike { background: transparent; border: none; color: #60a5fa; cursor: pointer; padding: 0; }
+.hidden { display: none; }
+
+#messages { height: 38vh; overflow: auto; background: #0b1220; border: 1px solid #1f2937; border-radius: 10px; padding: 10px; }
+.msg { margin: 8px 0; display: grid; grid-template-columns: 70px 1fr; gap: 8px; }
+.msg .who { color: #93c5fd; font-weight: 600; }
+.msg .bubble { background: #0a0f1b; border: 1px solid #1f2937; border-radius: 10px; padding: 8px 10px; }
+
+#askForm { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 10px; }
+#q { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #1f2937; background: #0b1220; color: white; }
+#askForm button { padding: 10px 14px; border-radius: 10px; border: 1px solid #1f2937; background: #0b1220; color: #e5e7eb; cursor: pointer; }
+.hint { color: #64748b; margin: 10px 2px 0; }
+
+footer { margin-top: 12px; color: #64748b; text-align: center; }

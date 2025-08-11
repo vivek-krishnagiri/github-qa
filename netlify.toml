@@ -1,0 +1,19 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = []
+
+[[redirects]]
+  from = "/login"
+  to = "/.netlify/functions/auth-start"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/oauth/callback"
+  to = "/.netlify/functions/auth-callback"
+  status = 200
+  force = true

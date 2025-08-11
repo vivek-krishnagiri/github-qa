@@ -15,9 +15,10 @@ loginBtn.addEventListener("click", () => {
 });
 
 logoutBtn.addEventListener("click", async () => {
-  // clear cookie by hitting callback with empty cookie (cheap & cheerful)
-  document.cookie = "gh_token=; Path=/; Max-Age=0; Secure; SameSite=Lax";
-  await refreshAuth();
+  try {
+    await fetch("/.netlify/functions/logout", { method: "POST" });
+  } catch {}
+  await refreshAuth(); // updates the UI to the logged-out state
 });
 
 askForm.addEventListener("submit", async (e) => {
